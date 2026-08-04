@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VMO指标帮助文档</title>
-  <meta name="viewport" content="width=device‑width, initial‑scale=1">
+  <!-- 必须引入vue主题CSS，没有这行就会样式很丑 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* 优化阅读宽度，避免文字拉得特别宽 */
+    .markdown-section {
+      max-width:860px;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+<script>
+window.$docsify = {
+  name: 'VMO指标文档',
+  repo: '',
+  loadSidebar: false,
+  subMaxLevel:3,
+  search: 'auto',
+  // 开启兼容GitHub Flavored Markdown（表格、删除线等）
+  markdown:{
+    smartypants: false
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+<!-- 代码高亮支持 -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 </body>
 </html>
